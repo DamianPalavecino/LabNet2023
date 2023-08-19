@@ -11,17 +11,18 @@ namespace LabNetPractica1
             this.cantidadPasajeros = cantidadPasajeros;
         }
 
-        public abstract void Avanzar();
-        public abstract void Detenerse();
+        public abstract string Avanzar();
+        public abstract string Detenerse();
+        public abstract int CantidadPasajeros { get; set; }
     }
 
     public class Omnibus : TransportePublico
     {
         private int pasajeros;
 
-        public Omnibus(int pasajeros) : base (cantidadPasajeros)
+        public Omnibus(int cantidadPasajeros) : base (cantidadPasajeros)
         {
-            this.pasajeros = pasajeros;
+            this.pasajeros = cantidadPasajeros;
         }
 
         public override string Avanzar()
@@ -34,7 +35,7 @@ namespace LabNetPractica1
             return "El Omnibus se detuvo.";
         }
 
-        public int PasajerosOmnibus
+        public override int CantidadPasajeros
         {
             get { return pasajeros; }
             set { pasajeros = value; }
@@ -46,9 +47,9 @@ namespace LabNetPractica1
     {
         private int pasajeros;
 
-        public Taxi(int pasajeros) : base(cantidadPasajeros)
+        public Taxi(int cantidadPasajeros) : base(cantidadPasajeros)
         {
-            this.pasajeros = pasajeros;
+            this.pasajeros = cantidadPasajeros;
         }
 
         public override string Avanzar()
@@ -61,7 +62,7 @@ namespace LabNetPractica1
             return "El Taxi se detuvo.";
         }
 
-        public int PasajerosTaxi
+        public override int CantidadPasajeros
         {
             get { return pasajeros; }
             set { pasajeros = value; }
