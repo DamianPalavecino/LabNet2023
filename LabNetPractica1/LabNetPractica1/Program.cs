@@ -13,18 +13,30 @@ namespace LabNetPractica1
             List<Omnibus> listaOmnibus = new List<Omnibus>();
             List<Taxi> listaTaxi = new List<Taxi>();
 
+            static int LeerCantidadPasajeros(string transporte)
+            {
+                Console.Write($"Ingrese la cantidad de pasajeros para el {transporte}: ");
+                if (int.TryParse(Console.ReadLine(), out int cantidad))
+                {
+                    return cantidad;
+                }
+                else
+                {
+                    Console.WriteLine("Error. Por favor, ingrese un número.");
+                    return LeerCantidadPasajeros(transporte);
+                }
+            }
+
             for (int i = 1; i <= 5; i++)
             {
-                Console.Write($"Ingrese la cantidad de pasajeros para el Omnibus {i}: ");
-                int pasajerosOmnibus = Convert.ToInt32(Console.ReadLine());
+                int pasajerosOmnibus = LeerCantidadPasajeros($"Omnibus {i}");
                 Omnibus omnibus = new Omnibus(pasajerosOmnibus);
                 listaOmnibus.Add(omnibus);
             }
 
             for (int i = 1; i <= 5; i++)
             {
-                Console.Write($"Ingrese la cantidad de pasajeros para el Taxi {i}: ");
-                int pasajerosTaxi = Convert.ToInt32(Console.ReadLine());
+                int pasajerosTaxi = LeerCantidadPasajeros($"Taxi {i}");
                 Taxi taxi = new Taxi(pasajerosTaxi);
                 listaTaxi.Add(taxi);
             }
