@@ -13,7 +13,7 @@ namespace LabNetPractica2
             Console.WriteLine("Ingresa un número para la división:");
             int valorIngresado = int.Parse(Console.ReadLine());
 
-            10.DividirPor(valorIngresado);
+            Ejercicio1.DividirPor(valorIngresado);
 
             Console.ReadKey();
         }
