@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabNetPractica2", "LabNetPr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabNetPractica2_2", "LabNetPractica2_2\LabNetPractica2_2.csproj", "{CFE19A53-30CE-4E60-9B75-B390809C63C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabNetPractica2_3_4", "LabNetPractica2_3_4\LabNetPractica2_3_4.csproj", "{0BDA1B42-5B4C-4A62-B3B9-0DAA4B242928}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CFE19A53-30CE-4E60-9B75-B390809C63C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFE19A53-30CE-4E60-9B75-B390809C63C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFE19A53-30CE-4E60-9B75-B390809C63C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BDA1B42-5B4C-4A62-B3B9-0DAA4B242928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BDA1B42-5B4C-4A62-B3B9-0DAA4B242928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BDA1B42-5B4C-4A62-B3B9-0DAA4B242928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BDA1B42-5B4C-4A62-B3B9-0DAA4B242928}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
