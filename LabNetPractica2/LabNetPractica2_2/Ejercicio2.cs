@@ -20,10 +20,6 @@ namespace LabNetPractica2_2
                 Console.WriteLine("¡Solo Chuck Norris divide por cero!");
                 Console.WriteLine($"Excepción: {excepcion.Message}");
             }
-            catch (FormatException)
-            {
-                Console.WriteLine("¡Seguro ingresó una letra o no ingresó nada!");
-            }
         }
     }
 }
