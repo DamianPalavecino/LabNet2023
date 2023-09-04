@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,5 +39,23 @@ namespace Lab.EF.Logic
                                         select p).ToList();
             return productsWithoutStock;
         }
+
+        public List<Product> GetStockProducts()
+        {
+            var productsWithStock = (from p in context.Products
+                                     where p.UnitsInStock > 0 && p.UnitPrice > 3
+                                     select p).ToList();
+            return productsWithStock;
+        }
+
+        public Product GetProductById(int id)
+        {
+            var product = (from p in context.Products
+                                    where p.ProductID == id
+                                    select p).FirstOrDefault();
+            return product;
+        }
+
+
     }
 }
