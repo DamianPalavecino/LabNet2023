@@ -12,11 +12,9 @@ namespace Lab.EF.UI
     {
         static void Main(string[] args)
         {
-            ProductsLogic productsLogic = new ProductsLogic();
-            foreach (Product product in productsLogic.GetAll())
-            {
-                Console.WriteLine(product.ProductName);
-            }
+            UIMenu menu = new UIMenu();
+
+            menu.Start();
         }
     }
 }
