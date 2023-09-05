@@ -56,6 +56,36 @@ namespace Lab.EF.Logic
             return product;
         }
 
+        public List<Product> GetProductsOrderedByName()
+        {
+            return context.Products.OrderBy(p => p.ProductName).ToList();
+        }
+
+        public List<Product> GetProductsOrderedByStock()
+        {
+            return context.Products.OrderByDescending(p => p.UnitsInStock).ToList();
+        }
+
+        public List<object> GetProductsWithCategories()
+        {
+            var productsWithCategories = context.Products.Join(
+                                            context.Categories,
+                                            product => product.CategoryID,
+                                            category => category.CategoryID,
+                                            (product, category) => new
+                                            {
+                                                category = category.CategoryName,
+                                                product = product.ProductName,
+                                            })
+                                            .ToList<object>();
+
+            return productsWithCategories;
+        }
+
+        public Product GetFirstProduct()
+        {
+            return context.Products.First();
+        }
 
     }
 }

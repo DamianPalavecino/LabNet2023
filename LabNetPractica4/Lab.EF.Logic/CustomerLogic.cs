@@ -48,9 +48,15 @@ namespace Lab.EF.Logic
             return customersInWA;
         }
 
-        public List<string> GetCustomerNames()
+        public List<object> GetCustomerNames()
         {
-            var customerNames = context.Customers.Select(c => $"{c.ContactName.ToUpper()} {c.ContactName.ToLower()}").ToList();
+            var customerNames = (from customer in context.Customers
+                                 select new
+                                 {
+                                     Uppercase = customer.ContactName.ToUpper(),
+                                     Lowercase = customer.ContactName.ToLower(),
+                                 }).ToList<object>();
+
             return customerNames;
         }
 
@@ -68,6 +74,17 @@ namespace Lab.EF.Logic
                                         }
                                         ).Distinct().ToList<object>();
             return customersWithOrders;
+        }
+
+        public List<Customer> GetFirstThreeWACustomers()
+        {
+            return context.Customers.Where(c => c.Region == "WA").Take(3).ToList();
+        }
+
+        public class CustomersWithOrderCount
+        {
+            public string CustomerName;
+            public int OrderCount;
         }
     }
 }
