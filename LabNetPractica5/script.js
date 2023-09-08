@@ -28,6 +28,7 @@ function verifyNumber() {
       bestScore = currentScore;
     }
     inputButton.disabled = true;
+    document.body.style.backgroundColor = 'rgb(58, 180, 58)';
     setTimeout(() => restartGame(), 2500);
   } else if (guess < targetNumber) {
     clue.textContent = 'El número es más alto.';
@@ -35,6 +36,13 @@ function verifyNumber() {
   } else {
     clue.textContent = 'El número es más bajo.';
     currentScore--;
+  }
+
+  if (currentScore === 0) {
+    inputButton.disabled = true;
+    clue.textContent = 'Perdiste!';
+    document.body.style.backgroundColor = 'red';
+    setTimeout(() => restartGame(), 2500);
   }
 
   score.textContent = currentScore;
@@ -50,6 +58,7 @@ function restartGame() {
   highscore.textContent = bestScore;
   finalNumber.textContent = '?';
   inputNumber.value = '';
+  document.body.style.backgroundColor = 'white';
   inputButton.disabled = false;
 }
 
