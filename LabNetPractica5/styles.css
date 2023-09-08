@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#top-section {
+  width: 100%;
+  display: Flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#restart {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgb(204, 29, 29);
+  color: white;
+  border: none;
+  align-self: flex-start;
+}
+
+#title-numbers {
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 30px;
+  background-color: deepskyblue;
+}
+
+#final-number {
+  border-radius: 9999px;
+  padding: 20px;
+  background-color: rgb(212, 202, 202);
+  margin-bottom: 50px;
+}
+
+#input-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#game {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#input-number {
+  height: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#input-button {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgba(14, 177, 14);
+  color: white;
+  border: none;
+  align-self: center;
+}
+
+#score-section {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+#clue {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(212, 202, 202);
+}
+
+#score-section div {
+  display: flex;
+  justify-content: space-between;
+}

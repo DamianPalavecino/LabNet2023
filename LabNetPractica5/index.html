@@ -8,7 +8,7 @@
   </head>
   <body>
     <main>
-      <section>
+      <section id="top-section">
         <button id="restart">Reiniciar!</button>
         <h1>
           Adivinar el Número!<span id="title-numbers">(entre 1 y 20)</span>
@@ -17,15 +17,21 @@
       </section>
       <section id="game">
         <div id="input-section">
-          <input id="input-number" type="number" />
+          <input
+            id="input-number"
+            type="number"
+            placeholder="Ingresa un número"
+          />
           <button type="button" id="input-button" onclick="verifyNumber()">
             Probar!
           </button>
         </div>
         <div id="score-section">
-          <p id="clue">Numero</p>
-          <p>Score: <span id="score"></span></p>
-          <p>Highscore: <span id="highscore"></span></p>
+          <p id="clue"></p>
+          <div>
+            <p>Score: <span id="score"></span></p>
+            <p>Highscore: <span id="highscore"></span></p>
+          </div>
         </div>
       </section>
     </main>
