@@ -1,0 +1,26 @@
+﻿@model Lab.EF.MVC.Models.EmployeeView
+
+@{
+    ViewBag.Title = "Add Employee Page";
+}
+
+<h1>Agrega un nuevo empleado</h1>
+
+@using (Html.BeginForm("Insert", "Employee", FormMethod.Post))
+{
+    <br />
+    @Html.LabelFor(n => n.Nombre)
+    @Html.TextBoxFor(n => n.Nombre)
+    @Html.ValidationMessageFor(n => n.Nombre, "", new { @class = "text-danger" })
+    <br />
+    @Html.LabelFor(n => n.Apellido)
+    @Html.TextBoxFor(n => n.Apellido)
+    @Html.ValidationMessageFor(n => n.Apellido, "", new { @class = "text-danger" })
+    <br />
+    @Html.LabelFor(n => n.Titulo)
+    @Html.TextBoxFor(n => n.Titulo)
+    @Html.ValidationMessageFor(n => n.Titulo, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    <input type="submit" class="btn btn-primary" value="Guardar" />
+}

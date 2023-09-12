@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Lab.EF.Logic
 {
-    public class EmployeeLogic : BaseLogic, ABMLogic<Employee>
+    public class EmployeeLogic : BaseLogic
     {
         public void Add(Employee employee)
         {
@@ -21,7 +21,7 @@ namespace Lab.EF.Logic
             return context.Employees.ToList();
         }
 
-        public void Remove(string id)
+        public void Remove(int id)
         {
             var employeeAEliminar = context.Employees.Find(id);
             context.Employees.Remove(employeeAEliminar);
