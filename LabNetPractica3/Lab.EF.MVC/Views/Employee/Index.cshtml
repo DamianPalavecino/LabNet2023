@@ -27,7 +27,7 @@
                 <td>@employee.Apellido</td>
                 <td>@employee.Titulo</td>
                 <td>@Html.ActionLink("Borrar", "Delete", new { id = employee.Id }, new { onclick = "return confirm('¿Deseas borrar este empleado?')" })</td>
-                @*<td>@Html.ActionLink("Editar", "Edit", new { id = employee.Id })</td>*@
+                <td>@Html.ActionLink("Editar", "Edit", new { id = employee.Id })</td>
             </tr>
         }
     </tbody>

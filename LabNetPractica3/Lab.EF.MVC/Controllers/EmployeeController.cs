@@ -39,16 +39,16 @@ namespace Lab.EF.MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Insert(Employee employeeView)
+        public ActionResult Insert(EmployeeView employeeView)
         {
             try
             {
                 Employee newEmployee = new Employee
                 {
-                    EmployeeID = employeeView.EmployeeID,
-                    FirstName = employeeView.FirstName,
-                    LastName = employeeView.LastName,
-                    Title = employeeView.Title,
+                    EmployeeID = employeeView.Id,
+                    FirstName = employeeView.Nombre,
+                    LastName = employeeView.Apellido,
+                    Title = employeeView.Titulo,
                 };
 
                 if (ModelState.IsValid)
