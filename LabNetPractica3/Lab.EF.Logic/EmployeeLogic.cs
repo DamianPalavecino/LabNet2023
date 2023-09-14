@@ -21,6 +21,11 @@ namespace Lab.EF.Logic
             return context.Employees.ToList();
         }
 
+        public Employee GetById(int id)
+        {
+            return context.Employees.FirstOrDefault(e => e.EmployeeID == id);
+        }
+
         public void Remove(int id)
         {
             var employeeAEliminar = context.Employees.Find(id);
