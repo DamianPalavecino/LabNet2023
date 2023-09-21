@@ -1,7 +1,13 @@
-<div *ngIf="employee">
-    <h2>Employee Details</h2>
-    <p><strong>ID:</strong> {{ employee?.Id }}</p>
-    <p><strong>Nombre:</strong> {{ employee?.Nombre }}</p>
-    <p><strong>Apellido:</strong> {{ employee?.Apellido }}</p>
-    <p><strong>Titulo:</strong> {{ employee?.Titulo }}</p>
-</div>
+<a [routerLink]="['/employees']"><button class="btn btn-secondary" style="margin-bottom:30px;">Volver</button></a>
+<div *ngIf="employee" class="card">
+    <div class="card-header">
+      <h2 class="card-title">Detalles del Empleado</h2>
+    </div>
+    <div class="card-body">
+      <p><strong>ID:</strong> {{ employee.Id }}</p>
+      <p><strong>Nombre:</strong> {{ employee.Nombre }}</p>
+      <p><strong>Apellido:</strong> {{ employee.Apellido }}</p>
+      <p><strong>Titulo:</strong> {{ employee.Titulo }}</p>
+    </div>
+  </div>
+  

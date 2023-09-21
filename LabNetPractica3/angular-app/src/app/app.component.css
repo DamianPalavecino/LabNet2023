@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  main {
+    flex-grow: 1; 
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff; 
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .wrapper::after {
+    content: '';
+    flex-grow: 1;
+  }
+  
