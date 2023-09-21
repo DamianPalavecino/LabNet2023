@@ -6,6 +6,7 @@ import { EmployeeApiService } from './services/employee-api.service';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EmployeeCreateComponent } from './components/employee-create/employee-create.component';
+import { EmployeeEditComponent } from './components/employee-edit/employee-edit.component';
 
 
 
@@ -13,9 +14,10 @@ import { EmployeeCreateComponent } from './components/employee-create/employee-c
   declarations: [
     EmployeeListComponent,
     EmployeeDetailsComponent,
-    EmployeeCreateComponent
+    EmployeeCreateComponent,
+    EmployeeEditComponent
   ],
-  exports: [EmployeeListComponent, EmployeeDetailsComponent, EmployeeCreateComponent],
+  exports: [EmployeeListComponent, EmployeeDetailsComponent, EmployeeCreateComponent, EmployeeEditComponent],
   imports: [
     CommonModule,
     RouterModule,

@@ -86,14 +86,19 @@ namespace API.Controllers
             try
             {
                 Employee employee = employeeLogic.GetById(id);
-                employee.FirstName = employeeView.Nombre;
-                employee.LastName = employeeView.Apellido;
-                employee.Title = employeeView.Titulo;
+                Employee updatedEmployee = new Employee
+                {
+                    EmployeeID = id,
+                    FirstName = employeeView.Nombre,
+                    LastName = employeeView.Apellido,
+                    Title = employeeView.Titulo
+                };
 
-                employeeLogic.Update(employee);
+                employeeLogic.Update(updatedEmployee);
             }
             catch (Exception ex)
             {
+                
                 throw ex;
             }
         }

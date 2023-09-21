@@ -7,7 +7,7 @@
         <th scope="col">Apellido</th>
         <th scope="col">Titulo</th>
         <th scope="col">Details</th>
-        <!-- <th scope="col">Edit</th> -->
+        <th scope="col">Edit</th>
       </tr>
     </thead>
     <tbody>
@@ -17,7 +17,7 @@
         <td>{{employee.Apellido}}</td>
         <td>{{employee.Titulo}}</td>
         <td><a [routerLink]="['/employees', employee.Id]">View Details</a></td>
-        <!-- <td><a [routerLink]="['/employees/form/', employee.Id]">Edit</a></td> -->
+        <td><a [routerLink]="['/employees/edit', employee.Id]">Edit</a></td>
 
         <!-- <td><a [routerLink]="['app-update-categories/' + item.Id]"><button class="btn btn-primary">Editar</button></a></td>
         <td><button class="btn btn-danger" (click)="eliminarCategoria(item.Id)">Eliminar</button></td> -->
