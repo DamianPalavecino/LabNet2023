@@ -8,6 +8,7 @@
         <th scope="col">Titulo</th>
         <th scope="col">Details</th>
         <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -18,7 +19,7 @@
         <td>{{employee.Titulo}}</td>
         <td><a [routerLink]="['/employees', employee.Id]">View Details</a></td>
         <td><a [routerLink]="['/employees/edit', employee.Id]">Edit</a></td>
-
+        <td><button (click)="deleteEmployee(employee)">Delete</button></td>
         <!-- <td><a [routerLink]="['app-update-categories/' + item.Id]"><button class="btn btn-primary">Editar</button></a></td>
         <td><button class="btn btn-danger" (click)="eliminarCategoria(item.Id)">Eliminar</button></td> -->
       </tr>
