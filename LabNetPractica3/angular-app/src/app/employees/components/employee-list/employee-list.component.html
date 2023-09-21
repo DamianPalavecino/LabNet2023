@@ -1,5 +1,28 @@
-<ul>
-  <li *ngFor="let employee of employees">
-    {{ employee.Nombre }} {{ employee.Apellido }}
-  </li>
-</ul>
+<div class="container">
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Details</th>
+        <!-- <th scope="col">Edit</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <th scope="row">{{employee.Id}}</th>
+        <td>{{employee.Nombre}}</td>
+        <td>{{employee.Apellido}}</td>
+        <td>{{employee.Titulo}}</td>
+        <td><a [routerLink]="['/employees', employee.Id]">View Details</a></td>
+        <!-- <td><a [routerLink]="['/employees/form/', employee.Id]">Edit</a></td> -->
+
+        <!-- <td><a [routerLink]="['app-update-categories/' + item.Id]"><button class="btn btn-primary">Editar</button></a></td>
+        <td><button class="btn btn-danger" (click)="eliminarCategoria(item.Id)">Eliminar</button></td> -->
+      </tr>
+    </tbody>
+  </table>
+  <a [routerLink]="['/employees/create']">Create</a>
+</div>

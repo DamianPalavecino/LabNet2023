@@ -1,1 +1,7 @@
-<p>employee-details works!</p>
+<div *ngIf="employee">
+    <h2>Employee Details</h2>
+    <p><strong>ID:</strong> {{ employee?.Id }}</p>
+    <p><strong>Nombre:</strong> {{ employee?.Nombre }}</p>
+    <p><strong>Apellido:</strong> {{ employee?.Apellido }}</p>
+    <p><strong>Titulo:</strong> {{ employee?.Titulo }}</p>
+</div>

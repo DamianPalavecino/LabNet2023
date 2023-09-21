@@ -9,12 +9,17 @@ import Employee from '../models/employees';
 })
 export class EmployeeApiService {
 
-  private apiUrl = 'http://localhost:64553/api/Employee'; // Replace with your API URL
+  private apiUrl = 'http://localhost:64553/api/Employee';
 
   constructor(private http: HttpClient) { }
 
   getEmployees(): Observable<Employee[]> {
     return this.http.get<Employee[]>(this.apiUrl);
+  }
+
+  getEmployeeById(id: number): Observable<Employee> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<Employee>(url);
   }
 
   createEmployee(newEmployee: Employee): Observable<Employee> {
